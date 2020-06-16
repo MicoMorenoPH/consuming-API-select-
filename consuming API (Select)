@@ -1,0 +1,14 @@
+
+//CONSUMING API (SELECT)
+
+$.ajax({
+   url: "api link here",
+   type: "Post",
+   datatype: "json",
+   async: false,
+   cache: false,
+   contentType: "application/json; charset=utf-8",
+   success: function (data) {
+       //do something here..
+   }
+});
