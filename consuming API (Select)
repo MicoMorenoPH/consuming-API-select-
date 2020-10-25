@@ -12,3 +12,28 @@ $.ajax({
        //do something here..
    }
 });
+
+//NEW
+
+$(document).on('click', '#btnNewApi', function () {
+
+                var dtl = [];
+                var vdtl = {};
+                var tmp = "";
+
+                vdtl = {
+                    CardCode: $('#txtValue').val(),
+                }
+                dtl.push(vdtl);
+
+                $.ajax({
+                    url: "http://172.30.1.167:85/api/TollsApi/GetSupplier",
+                    type: "Post",
+                    datatype: "json",
+                    data: JSON.stringify(dtl),
+                    contentType: "application/json; charset=utf-8",
+                    success: function (data) {
+                        ..do something here..      
+                    }
+                });
+            });
