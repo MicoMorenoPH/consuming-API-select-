@@ -37,3 +37,30 @@ $(document).on('click', '#btnNewApi', function () {
                     }
                 });
             });
+            
+
+//NEW
+
+function getBranchInformation(branchCode) {
+    vdtl = {}
+    dtl = []
+    debugger;
+
+    vdtl = {
+        function: "getTestApiBranch",
+        branchCode: branchCode,
+    }
+    dtl.push(vdtl);
+
+    $.ajax({
+        url: "http://localhost:59072/api/GetMethod/GetBranch1",
+        type: "POST",
+        dataType: "JSON",
+        data: JSON.stringify(dtl),
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+            console.log(data);
+        }
+    });
+
+}
